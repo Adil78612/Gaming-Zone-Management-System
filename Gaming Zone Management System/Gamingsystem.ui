@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GameManagementSystem</class>
+ <widget class="QWidget" name="GameManagementSystem">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>646</width>
+    <height>486</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Game Management System</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QStackedWidget" name="stackedWidget">
+     <property name="currentIndex">
+      <number>5</number>
+     </property>
+     <widget class="QWidget" name="userSelectionPage">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QPushButton" name="userButton">
+         <property name="text">
+          <string>User</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="adminButton">
+         <property name="text">
+          <string>Admin</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="loginPage">
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QLineEdit" name="usernameInput">
+         <property name="placeholderText">
+          <string>Enter Username</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="passwordInput">
+         <property name="echoMode">
+          <enum>QLineEdit::Password</enum>
+         </property>
+         <property name="placeholderText">
+          <string>Enter Password</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="loginButton">
+         <property name="text">
+          <string>Login</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="signupButton">
+         <property name="text">
+          <string>Sign Up</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="signupPage">
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QLineEdit" name="signupUsernameInput">
+         <property name="placeholderText">
+          <string>Enter Username</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="emailInput">
+         <property name="placeholderText">
+          <string>Enter Email</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="contactInput">
+         <property name="placeholderText">
+          <string>Contact Number</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="passwordSignupInput">
+         <property name="echoMode">
+          <enum>QLineEdit::Password</enum>
+         </property>
+         <property name="placeholderText">
+          <string>Enter Password</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="confirmPasswordInput">
+         <property name="echoMode">
+          <enum>QLineEdit::Password</enum>
+         </property>
+         <property name="placeholderText">
+          <string>Confirm Password</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="roleComboBox">
+         <item>
+          <property name="text">
+           <string>Manager</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Player</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="submitSignupButton">
+         <property name="text">
+          <string>Sign Up</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="userPage">
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <widget class="QTableWidget" name="gamesTable">
+         <property name="columnCount">
+          <number>1</number>
+         </property>
+         <property name="horizontalHeaderLabels" stdset="0">
+          <stringlist>
+           <string>Game</string>
+           <string>Available Slots</string>
+           <string>Stations</string>
+          </stringlist>
+         </property>
+         <column>
+          <property name="text">
+           <string>Game Title </string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="currentBookingsTable">
+         <property name="columnCount">
+          <number>4</number>
+         </property>
+         <property name="horizontalHeaderLabels" stdset="0">
+          <stringlist>
+           <string>Game</string>
+           <string>Time Slot</string>
+           <string>Station</string>
+          </stringlist>
+         </property>
+         <column>
+          <property name="text">
+           <string>New Column</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Title</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Date</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Device</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="bookButton">
+         <property name="text">
+          <string>Book</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="cancelBookingButton">
+         <property name="text">
+          <string>Cancel All Bookings</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="cancelSelectedBookingButton">
+         <property name="text">
+          <string>Cancel Selected Booking</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="logoutButton">
+         <property name="text">
+          <string>Logout</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="bookingPage">
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <item>
+        <widget class="QComboBox" name="gameSelectionComboBox">
+         <property name="placeholderText" stdset="0">
+          <string>Select Game</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QDateEdit" name="dateEdit"/>
+       </item>
+       <item>
+        <widget class="QTimeEdit" name="timeEdit"/>
+       </item>
+       <item>
+        <widget class="QComboBox" name="stationComboBox">
+         <property name="placeholderText" stdset="0">
+          <string>Select Station</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="confirmBookingButton">
+         <property name="text">
+          <string>Confirm Booking</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="adminPage">
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <item>
+        <widget class="QTableWidget" name="adminGamesTable">
+         <property name="columnCount">
+          <number>1</number>
+         </property>
+         <property name="horizontalHeaderLabels" stdset="0">
+          <stringlist>
+           <string>Game</string>
+           <string>Available Slots</string>
+           <string>Stations</string>
+          </stringlist>
+         </property>
+         <column>
+          <property name="text">
+           <string>New Column</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="addGameButton">
+         <property name="text">
+          <string>Add Game</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="deleteGameButton">
+         <property name="text">
+          <string>Delete Game</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="deleteBookingButton">
+         <property name="text">
+          <string>Delete Selected Booking</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="deleteAllBookingsButton">
+         <property name="text">
+          <string>Delete All Bookings</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="AdminlogoutButton">
+         <property name="text">
+          <string>Logout</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="adminBookingsTable">
+         <property name="columnCount">
+          <number>5</number>
+         </property>
+         <property name="horizontalHeaderLabels" stdset="0">
+          <stringlist>
+           <string>Game</string>
+           <string>Time Slot</string>
+           <string>Station</string>
+           <string>User ID</string>
+          </stringlist>
+         </property>
+         <column>
+          <property name="text">
+           <string>Game Title</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Date</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Time</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>DeviceID</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>UserID</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="addGamePage">
+      <layout class="QVBoxLayout" name="verticalLayout_8">
+       <item>
+        <widget class="QLineEdit" name="gameNameInput">
+         <property name="placeholderText">
+          <string>Enter Game Name</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="gameGenreInput">
+         <property name="placeholderText">
+          <string>Enter Game Genre</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="gameStationsInput">
+         <property name="placeholderText">
+          <string>Enter Stations (comma-separated)</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="gameTimeSlotsInput">
+         <property name="placeholderText">
+          <string>Enter Time Slots (comma-separated)</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="submitGameButton">
+         <property name="text">
+          <string>Submit Game</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="addBookingPage">
+      <layout class="QVBoxLayout" name="verticalLayout_9">
+       <item>
+        <widget class="QLineEdit" name="adminUsernameInput">
+         <property name="placeholderText">
+          <string>Enter User's Username</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="adminGameSelectionComboBox">
+         <property name="placeholderText" stdset="0">
+          <string>Select Game</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="adminTimeSlotComboBox">
+         <property name="placeholderText" stdset="0">
+          <string>Select Time Slot</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="adminStationComboBox">
+         <property name="placeholderText" stdset="0">
+          <string>Select Station</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="submitBookingButton">
+         <property name="text">
+          <string>Submit Booking</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
